@@ -27,9 +27,104 @@
         --sm: 14px
       }
 
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background-color: var(--cream);
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 700px;
+        background: var(--white);
+        margin-bottom: 40px;
+      }
+
+      .img {
+        width: 100%;
+      }
+
+      .product-info {
+        padding: 36px;
+      }
+
+      .product-info>p:nth-child(1) {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: var(--montserrat);
+        letter-spacing: 3px;
+        color: var(--dark-grayish-blue);
+      }
+
+      .product-info h3 {
+        margin: 0 0 30px 0;
+        font-size: 40px;
+        font-family: var(--fraunces);
+      }
+
+      .product-info>p:nth-child(3) {
+        font-size: var(--sm);
+        font-family: var(--montserrat);
+        color: var(--dark-grayish-blue);
+      }
+
+      .price {
+        height: 100px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .price p {
+        margin: 0;
+      }
+
+      .price :nth-child(1) {
+        font-size: 40px;
+        font-family: var(--fraunces);
+        color: var(--dark-cyan);
+      }
+
+      .price :nth-child(2) {
+        font-family: var(--montserrat);
+        font-size: var(--sm);
+        color: var(--dark-grayish-blue);
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        height: 46px;
+        border-radius: 8px;
+        background-color: var(--dark-cyan);
+        font-family: var(--montserrat);
+        color: var(--white);
+        border: none;
+        font-size: 16px;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
       .attribution {
+        position: absolute;
+        bottom: 0;
         font-size: 11px;
         text-align: center;
+        padding: 24px 0;
+        font-family: var(--montserrat);
       }
 
       .attribution a {
@@ -48,9 +143,11 @@
           <p>$149.99</p>
           <p>$169.99</p>
         </div>
-        <button>Add to Cart</button>
+        <button><img src="./images/icon-cart.svg" alt="add-to-cart-icon">
+          <p>Add to Cart</p>
+        </button>
       </div>
     </div>
-    <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>. </div>
+    <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">@cesarforall</a>. </div>
   </body>
 </html>
